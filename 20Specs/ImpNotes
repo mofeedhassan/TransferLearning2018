@@ -1,0 +1,6 @@
+accept.nt is the old name of the reference mappings
+for each one it is changed to be "reference" and the format is changed from
+source <-> target <-> similarity
+into source sameas similarity. it must be done for all spec folders
+
+be sure o put the old version acceptance in the original folder

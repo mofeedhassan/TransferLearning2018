@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE LIMES
+  SYSTEM "limes.dtd">
+<LIMES>
+<PREFIX>
+      <NAMESPACE>http://www4.wiwiss.fu-berlin.de/factbook/ns#</NAMESPACE>
+      <LABEL>factbook</LABEL>
+  </PREFIX>
+<PREFIX>
+      <NAMESPACE>http://sw.opencyc.org/2008/06/10/concept/</NAMESPACE>
+      <LABEL>opencyc</LABEL>
+  </PREFIX>
+<PREFIX>
+      <NAMESPACE>http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/</NAMESPACE>
+      <LABEL>drug</LABEL>
+  </PREFIX>
+<PREFIX>
+      <NAMESPACE>http://statistics.data.gov.uk/def/administrative-geography/</NAMESPACE>
+      <LABEL>administrative-geography</LABEL>
+  </PREFIX>
+<PREFIX>
+      <NAMESPACE>http://dbpedia.org/class/yago/</NAMESPACE>
+      <LABEL>yago</LABEL>
+  </PREFIX>
+<PREFIX>
+      <NAMESPACE>http://www.geonames.org/ontology#</NAMESPACE>
+      <LABEL>geonames</LABEL>
+  </PREFIX>
+  <PREFIX>
+      <NAMESPACE>http://purl.org/collections/nl/stadsarchief/</NAMESPACE>
+      <LABEL>stads</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://epo.publicdata.eu/ebd/ontology/</NAMESPACE>
+      <LABEL>epo</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://ontologi.es/rail/vocab#</NAMESPACE>
+      <LABEL>rail</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://dbpedia.org/ontology/</NAMESPACE>
+      <LABEL>dbpedia</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www.aktors.org/ontology/portal#</NAMESPACE>
+      <LABEL>akt</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://openei.org/resources/</NAMESPACE>
+      <LABEL>openei</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://purl.org/collections/nl/rijksmonumenten/</NAMESPACE>
+      <LABEL>rmon</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/</NAMESPACE>
+      <LABEL>drug</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://climb.dataincubator.org/vocabs/climb/</NAMESPACE>
+      <LABEL>climb</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://rdf.geospecies.org/ont/geospecies#</NAMESPACE>
+      <LABEL>geospecies</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://data.bibbase.org/ontology/#</NAMESPACE>
+      <LABEL>BibTeX</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www4.wiwiss.fu-berlin.de/sider/resource/sider/</NAMESPACE>
+      <LABEL>sider</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://data.semanticweb.org/ns/swc/ontology#</NAMESPACE>
+      <LABEL>swc</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www.w3.org/1999/02/22-rdf-syntax-ns#</NAMESPACE>
+      <LABEL>rdf</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www.w3.org/2000/01/rdf-schema#</NAMESPACE>
+      <LABEL>rdfs</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www.w3.org/2002/07/owl#</NAMESPACE>
+      <LABEL>owl</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://dbpedia.org/ontology/</NAMESPACE>
+      <LABEL>dbpedia-owl</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://dbpedia.org/property/</NAMESPACE>
+      <LABEL>dbpedia-prop</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://purl.org/dc/terms/</NAMESPACE>
+      <LABEL>dc</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://data.linkedmdb.org/resource/movie/</NAMESPACE>
+      <LABEL>linkedmdb</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://xmlns.com/foaf/0.1/</NAMESPACE>
+      <LABEL>foaf</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www4.wiwiss.fu-berlin.de/diseasome/resource/diseasome/</NAMESPACE>
+      <LABEL>diseasome</LABEL>
+   </PREFIX>
+   <PREFIX>
+      <NAMESPACE>http://www4.wiwiss.fu-berlin.de/sider/resource/sider/</NAMESPACE>
+      <LABEL>sider</LABEL>
+   </PREFIX>
+   <SOURCE>
+      <ID>dbpedia</ID>
+      <ENDPOINT>http://dbpedia.org/sparql</ENDPOINT>
+      <VAR>?a</VAR>
+      <PAGESIZE>1000</PAGESIZE>
+      <RESTRICTION>?a rdf:type dbpedia:Disease</RESTRICTION>
+      <PROPERTY>foaf:name AS lowercase</PROPERTY>
+      <PROPERTY>rdfs:label AS lowercase</PROPERTY>
+   </SOURCE>
+   <TARGET>
+      <ID>sider</ID>
+      <ENDPOINT>http://[2001:638:902:2010:216:3eff:fe5a:e5c1]:8890/sparql</ENDPOINT>
+      <GRAPH>http://sidereffect.org</GRAPH>
+      <VAR>?b</VAR>
+      <PAGESIZE>1000</PAGESIZE>
+      <RESTRICTION>?b rdf:type sider:side_effects</RESTRICTION>
+      <PROPERTY>rdfs:label AS lowercase</PROPERTY>
+      <PROPERTY>sider:sideEffectName AS lowercase</PROPERTY>
+   </TARGET>
+   <METRIC>MAX(levenshtein(a.foaf:name, b.rdfs:label), MAX(levenshtein(a.rdfs:label, b.rdfs:label), MAX(levenshtein(a.foaf:name, b.sider:sideEffectName), levenshtein(a.rdfs:label, b.sider:sideEffectName))))</METRIC>
+   <ACCEPTANCE>
+      <THRESHOLD>0.33</THRESHOLD>
+      <FILE>accept-dbpedia-sidersid.nt</FILE>
+      <RELATION/>
+   </ACCEPTANCE>
+   <REVIEW>
+      <THRESHOLD>0.33</THRESHOLD>
+      <FILE>review-dbpedia-sidersid.nt</FILE>
+      <RELATION/>
+   </REVIEW>
+   <EXECUTION>Simple</EXECUTION>
+   <OUTPUT>NT</OUTPUT>
+</LIMES>

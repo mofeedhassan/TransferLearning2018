@@ -1,0 +1,84 @@
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: DBpedia
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, dbp=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geospecies=http://rdf.geospecies.org/ont/geospecies#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Species]
+Properties: [dbp:binomial, foaf:page]
+Functions: {dbp:binomial={dbp:binomial=lowercase}, foaf:page={foaf:page=lowercase}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: GeoSpecies
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, dbp=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geospecies=http://rdf.geospecies.org/ont/geospecies#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?b rdf:type geospecies:SpeciesConcept]
+Properties: [geospecies:hasCanonicalName, geospecies:hasWikipediaArticle]
+Functions: {geospecies:hasCanonicalName={geospecies:hasCanonicalName=lowercase}, geospecies:hasWikipediaArticle={geospecies:hasWikipediaArticle=lowercase}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: DBpedia
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, dbp=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geospecies=http://rdf.geospecies.org/ont/geospecies#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Species]
+Properties: [dbp:binomial, foaf:page]
+Functions: {dbp:binomial={dbp:binomial=lowercase}, foaf:page={foaf:page=lowercase}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: GeoSpecies
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, dbp=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geospecies=http://rdf.geospecies.org/ont/geospecies#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?b rdf:type geospecies:SpeciesConcept]
+Properties: [geospecies:hasCanonicalName, geospecies:hasWikipediaArticle]
+Functions: {geospecies:hasCanonicalName={geospecies:hasCanonicalName=lowercase}, geospecies:hasWikipediaArticle={geospecies:hasWikipediaArticle=lowercase}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/1259144997.ser
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for DBpedia
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [dbp:binomial, foaf:page]
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geospecies: <http://rdf.geospecies.org/ont/geospecies#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?a ?v0 ?v1
+WHERE {
+?a rdf:type dbpedia-owl:Species .
+?a dbp:binomial ?v0 .
+?a foaf:page ?v1 .
+}
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+10.04.2013 15:21:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 5 triples and 5 entities.
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 0.538 seconds.
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 5 objects to /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/1259144997.ser
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/-1755562070.ser
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/-1755562070.ser
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 11770
+10.04.2013 15:21:13 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:132): Merging with MAX
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 30696ms.
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 58830 links above acceptance threshold.
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 32.354 seconds
+10.04.2013 15:21:44 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

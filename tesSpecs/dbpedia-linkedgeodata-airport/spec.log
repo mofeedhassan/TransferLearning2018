@@ -1,0 +1,103 @@
+05.01.2017 21:40:59 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, dbpedia-owl=http://dbpedia.org/ontology/, linkedgeodata=http://linkedgeodata.org/triplify/, lgdo=http://linkedgeodata.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, lgdp=http://linkedgeodata.org/property/, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/}
+Endpoint: http://dbpedia.org/sparql/
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Airport]
+Properties: [rdfs:label, wgs84:lat, wgs84:long]
+Functions: {rdfs:label={rdfs:label=lowercase}, wgs84:long={wgs84:long=number}, wgs84:lat={wgs84:lat=number}}
+Page size: 1000
+Type: sparql
+
+05.01.2017 21:40:59 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: linkedgeodata
+Var: ?b
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, dbpedia-owl=http://dbpedia.org/ontology/, linkedgeodata=http://linkedgeodata.org/triplify/, lgdo=http://linkedgeodata.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, lgdp=http://linkedgeodata.org/property/, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/}
+Endpoint: http://linkedgeodata.org/sparql/
+Graph: null
+Restrictions: [?b rdf:type lgdo:Airport]
+Properties: [rdfs:label, wgs84:lat, wgs84:long]
+Functions: {rdfs:label={rdfs:label=lowercase}, wgs84:long={wgs84:long=number}, wgs84:lat={wgs84:lat=number}}
+Page size: 1000
+Type: sparql
+
+05.01.2017 21:40:59 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+05.01.2017 21:40:59 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/102229170.ser
+05.01.2017 21:40:59 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/102229170.ser
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/102229170.ser
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 14151
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-1162221579.ser
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:248): No cached data found for linkedgeodata
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [rdfs:label, wgs84:lat, wgs84:long]
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:139): Query issued is 
+PREFIX umbel-sc: <http://umbel.org/umbel/sc/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX linkedgeodata: <http://linkedgeodata.org/triplify/>
+PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lgdp: <http://linkedgeodata.org/property/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT DISTINCT ?b ?v0 ?v1 ?v2
+WHERE {
+?b rdf:type lgdo:Airport .
+?b rdfs:label ?v0 .
+?b wgs84:lat ?v1 .
+?b wgs84:long ?v2 .
+}
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:141): Querying the endpoint.
+05.01.2017 21:41:04 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 0 to 1000
+05.01.2017 21:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 1000 to 2000
+05.01.2017 21:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 2000 to 3000
+05.01.2017 21:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 3000 to 4000
+05.01.2017 21:41:11 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 4000 to 5000
+05.01.2017 21:41:11 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 5000 to 6000
+05.01.2017 21:41:11 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 6000 to 7000
+05.01.2017 21:41:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 7000 to 8000
+05.01.2017 21:41:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 8000 to 9000
+05.01.2017 21:41:12 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 9000 to 10000
+05.01.2017 21:41:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 10000 to 11000
+05.01.2017 21:41:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 11000 to 12000
+05.01.2017 21:41:14 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 12000 to 13000
+05.01.2017 21:41:14 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 13000 to 14000
+05.01.2017 21:41:14 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 14000 to 15000
+05.01.2017 21:41:15 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 15000 to 16000
+05.01.2017 21:41:15 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 16000 to 17000
+05.01.2017 21:41:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 17000 to 18000
+05.01.2017 21:41:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 18000 to 19000
+05.01.2017 21:41:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 19000 to 20000
+05.01.2017 21:41:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 20000 to 21000
+05.01.2017 21:41:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 21000 to 22000
+05.01.2017 21:41:18 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 22000 to 23000
+05.01.2017 21:41:18 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 23000 to 24000
+05.01.2017 21:41:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 24000 to 25000
+05.01.2017 21:41:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 25000 to 26000
+05.01.2017 21:41:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 26000 to 27000
+05.01.2017 21:41:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 27000 to 28000
+05.01.2017 21:41:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 28000 to 29000
+05.01.2017 21:41:21 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 29000 to 30000
+05.01.2017 21:41:21 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 30000 to 31000
+05.01.2017 21:41:21 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 31000 to 32000
+05.01.2017 21:41:22 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 32000 to 33000
+05.01.2017 21:41:22 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 33000 to 34000
+05.01.2017 21:41:23 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 34000 to 35000
+05.01.2017 21:41:23 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 35000 to 36000
+05.01.2017 21:41:24 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 36000 to 37000
+05.01.2017 21:41:24 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 37000 to 38000
+05.01.2017 21:41:25 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 38000 to 39000
+05.01.2017 21:41:25 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:248): Retrieved 37602 triples and 33579 entities.
+05.01.2017 21:41:25 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:249): Retrieving statements took 20.959 seconds.
+05.01.2017 21:41:25 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:179): Serializing 33579 objects to /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-1162221579.ser
+05.01.2017 21:42:00 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 24726ms.
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name NT
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using N3Serializer to serialize
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 7423 links above acceptance threshold.
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 85.633 seconds
+05.01.2017 21:42:24 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.

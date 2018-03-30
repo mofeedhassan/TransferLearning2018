@@ -1,0 +1,115 @@
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: bluk-bnb
+Var: ?a
+Prefixes: {geonames=http://www.geonames.org/ontology#, naptan=http://transport.data.gov.uk/def/naptan/, owl=http://www.w3.org/2002/07/owl#, bibliographic=http://data.bl.uk/schema/bibliographic#, ov=http://open.vocab.org/terms/, gazetteer=http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/, postcode=http://data.ordnancesurvey.co.uk/ontology/postcode/, yago=http://dbpedia.org/class/yago/, skos=http://www.w3.org/2004/02/skos/core#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpediaowl=http://dbpedia.org/ontology/, dbpp=http://dbpedia.org/property/, climb=http://climb.dataincubator.org/vocabs/climb/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, dgadmingeo=http://statistics.data.gov.uk/def/administrative-geography/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, dcterms=http://purl.org/dc/terms/, bibo=http://purl.org/ontology/bibo/, spatial=http://data.ordnancesurvey.co.uk/ontology/spatialrelations/, metoffice=http://metoffice.dataincubator.org/vocabs/metoffice/, foaf=http://xmlns.com/foaf/0.1/, admingeo=http://data.ordnancesurvey.co.uk/ontology/admingeo/, traffic=http://transport.data.gov.uk/def/traffic/}
+Endpoint: http://bnb.data.bl.uk/sparql
+Graph: 0
+Restrictions: [?a a foaf:Person ; bibliographic:has_created ?work ]
+Properties: [bibliographic:has_created/dcterms:title]
+Functions: {bibliographic:has_created/dcterms:title={bibliographic:has_created/dcterms:title=nolang->lowercase}}
+Page size: 1000
+Type: sparql
+
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: dbpedia
+Var: ?b
+Prefixes: {geonames=http://www.geonames.org/ontology#, naptan=http://transport.data.gov.uk/def/naptan/, owl=http://www.w3.org/2002/07/owl#, bibliographic=http://data.bl.uk/schema/bibliographic#, ov=http://open.vocab.org/terms/, gazetteer=http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/, postcode=http://data.ordnancesurvey.co.uk/ontology/postcode/, yago=http://dbpedia.org/class/yago/, skos=http://www.w3.org/2004/02/skos/core#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpediaowl=http://dbpedia.org/ontology/, dbpp=http://dbpedia.org/property/, climb=http://climb.dataincubator.org/vocabs/climb/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, dgadmingeo=http://statistics.data.gov.uk/def/administrative-geography/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, dcterms=http://purl.org/dc/terms/, bibo=http://purl.org/ontology/bibo/, spatial=http://data.ordnancesurvey.co.uk/ontology/spatialrelations/, metoffice=http://metoffice.dataincubator.org/vocabs/metoffice/, foaf=http://xmlns.com/foaf/0.1/, admingeo=http://data.ordnancesurvey.co.uk/ontology/admingeo/, traffic=http://transport.data.gov.uk/def/traffic/}
+Endpoint: http://dbpedia.org/sparql
+Graph: 0
+Restrictions: [?novel dbpediaowl:author ?b ]
+Properties: [dbpediaowl:author/dbpp:name , foaf:name, dbpediaowl:author/dbpp:isbn]
+Functions: {foaf:name={foaf:name=nolang->lowercase}, dbpediaowl:author/dbpp:isbn={dbpediaowl:author/dbpp:isbn=}, dbpediaowl:author/dbpp:name ={dbpediaowl:author/dbpp:name =nolang->lowercase}}
+Page size: 1000
+Type: sparql
+
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/1905012812.ser
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:248): No cached data found for bluk-bnb
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [bibliographic:has_created/dcterms:title]
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:139): Query issued is 
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX naptan: <http://transport.data.gov.uk/def/naptan/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX bibliographic: <http://data.bl.uk/schema/bibliographic#>
+PREFIX ov: <http://open.vocab.org/terms/>
+PREFIX gazetteer: <http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/>
+PREFIX postcode: <http://data.ordnancesurvey.co.uk/ontology/postcode/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbpp: <http://dbpedia.org/property/>
+PREFIX climb: <http://climb.dataincubator.org/vocabs/climb/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dgadmingeo: <http://statistics.data.gov.uk/def/administrative-geography/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX spatial: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
+PREFIX metoffice: <http://metoffice.dataincubator.org/vocabs/metoffice/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/>
+PREFIX traffic: <http://transport.data.gov.uk/def/traffic/>
+SELECT DISTINCT ?a ?v0
+WHERE {
+?a a foaf:Person ; bibliographic:has_created ?work .
+?a bibliographic:has_created ?w1 .
+?w1 dcterms:title ?v0 .
+}
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:141): Querying the endpoint.
+07.03.2018 22:41:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 0 to 1000
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:248): Retrieved 0 triples and 0 entities.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:249): Retrieving statements took 0.69 seconds.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:179): Serializing 0 objects to /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/1905012812.ser
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/-1396474769.ser
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/-1396474769.ser
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:248): No cached data found for dbpedia
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [dbpediaowl:author/dbpp:name , foaf:name, dbpediaowl:author/dbpp:isbn]
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:139): Query issued is 
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX naptan: <http://transport.data.gov.uk/def/naptan/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX bibliographic: <http://data.bl.uk/schema/bibliographic#>
+PREFIX ov: <http://open.vocab.org/terms/>
+PREFIX gazetteer: <http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/>
+PREFIX postcode: <http://data.ordnancesurvey.co.uk/ontology/postcode/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpediaowl: <http://dbpedia.org/ontology/>
+PREFIX dbpp: <http://dbpedia.org/property/>
+PREFIX climb: <http://climb.dataincubator.org/vocabs/climb/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dgadmingeo: <http://statistics.data.gov.uk/def/administrative-geography/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX spatial: <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/>
+PREFIX metoffice: <http://metoffice.dataincubator.org/vocabs/metoffice/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX admingeo: <http://data.ordnancesurvey.co.uk/ontology/admingeo/>
+PREFIX traffic: <http://transport.data.gov.uk/def/traffic/>
+SELECT DISTINCT ?b ?v0 ?v1 ?v2
+WHERE {
+?novel dbpediaowl:author ?b .
+?b dbpediaowl:author ?w1 .
+?w1 dbpp:name  ?v0 .
+?b foaf:name ?v1 .
+?b dbpediaowl:author ?w2 .
+?w2 dbpp:isbn ?v2 .
+}
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:141): Querying the endpoint.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 0 to 1000
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:248): Retrieved 0 triples and 0 entities.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:249): Retrieving statements took 0.084 seconds.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:179): Serializing 0 objects to /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/-1396474769.ser
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:162): Merging with ADD and filtering with condition ADD(0.333333333333333333*Equality(a.bibliographic:has_created/dcterms:title, b.dbpediaowl:author.dbpp:name), 0.333333333333333333*trigrams(a.foaf:name, b.foaf:name), 0.333333333333333333*Equality(a.bibliographic:hasCreated/bibo:isbn10, b.dbpediaowl:author/dbpp:isbn)) and threshold 0.6
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 12ms.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name TAB
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using TabSeparatedSerializer to serialize
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 0 links above acceptance threshold.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 1.038 seconds
+07.03.2018 22:41:10 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.

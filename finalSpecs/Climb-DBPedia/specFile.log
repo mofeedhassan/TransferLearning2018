@@ -1,0 +1,61 @@
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: data-incubator-climb
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, dbpp=http://dbpedia.org/property/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type climb:Venue ]
+Properties: [rdfs:label, geo:lat, geo:long]
+Functions: {rdfs:label={rdfs:label=lowercase}, geo:long={geo:long=}, geo:lat={geo:lat=}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: dbpedia
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, dbpp=http://dbpedia.org/property/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?b dcterms:subject <http://dbpedia.org/resource/Category:Marilyns_of_Scotland> ; dbpp:name ?name ; geo:lat ?lat ]
+Properties: [dbpp:name, geo:lat, geo:long]
+Functions: {dbpp:name={dbpp:name=lowercase}, geo:long={geo:long=}, geo:lat={geo:lat=}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: data-incubator-climb
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, dbpp=http://dbpedia.org/property/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type climb:Venue ]
+Properties: [rdfs:label, geo:lat, geo:long]
+Functions: {rdfs:label={rdfs:label=lowercase}, geo:long={geo:long=}, geo:lat={geo:lat=}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: dbpedia
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, dbpp=http://dbpedia.org/property/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?b dcterms:subject <http://dbpedia.org/resource/Category:Marilyns_of_Scotland> ; dbpp:name ?name ; geo:lat ?lat ]
+Properties: [dbpp:name, geo:lat, geo:long]
+Functions: {dbpp:name={dbpp:name=lowercase}, geo:long={geo:long=}, geo:lat={geo:lat=}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/100651776.ser
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/100651776.ser
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 1307
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/1776179813.ser
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/1776179813.ser
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 239
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 390ms.
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 79 links above acceptance threshold.
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 0.844 seconds
+10.04.2013 15:48:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

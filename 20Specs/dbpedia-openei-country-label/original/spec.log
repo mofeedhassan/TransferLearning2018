@@ -1,0 +1,59 @@
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, mo=http://purl.org/ontology/mo/, geonames=http://www.geonames.org/ontology#, dbpedia-owl=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, hcterms=http://purl.org/uF/hCard/terms/, yago=http://dbpedia.org/class/yago/, skos=http://www.w3.org/2004/02/skos/core#, dbpedia=http://dbpedia.org/ontology/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, openei=http://openei.org/resources/, linkedmdb=http://data.linkedmdb.org/resource/movie/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, linkedgeodata=http://linkedgeodata.org/triplify/, lgdo=http://linkedgeodata.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, lgdp=http://linkedgeodata.org/property/, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/}
+Endpoint: http://live.dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Country ]
+Properties: [rdfs:label, dbpedia-owl:wikiPageRedirects]
+Functions: {rdfs:label={rdfs:label=lowercase}, dbpedia-owl:wikiPageRedirects={dbpedia-owl:wikiPageRedirects=cleaniri->lowercase}}
+Page size: 1000
+Type: sparql
+
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: openei
+Var: ?b
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, mo=http://purl.org/ontology/mo/, geonames=http://www.geonames.org/ontology#, dbpedia-owl=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, hcterms=http://purl.org/uF/hCard/terms/, yago=http://dbpedia.org/class/yago/, skos=http://www.w3.org/2004/02/skos/core#, dbpedia=http://dbpedia.org/ontology/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, openei=http://openei.org/resources/, linkedmdb=http://data.linkedmdb.org/resource/movie/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, linkedgeodata=http://linkedgeodata.org/triplify/, lgdo=http://linkedgeodata.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, lgdp=http://linkedgeodata.org/property/, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/}
+Endpoint: http://en.openei.org/sparql
+Graph: null
+Restrictions: [?b rdf:type openei:Category-3ACountries ]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/1070341507.ser
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:248): No cached data found for dbpedia
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [rdfs:label, dbpedia-owl:wikiPageRedirects]
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:139): Query issued is 
+PREFIX umbel-sc: <http://umbel.org/umbel/sc/>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX hcterms: <http://purl.org/uF/hCard/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-prop: <http://dbpedia.org/property/>
+PREFIX openei: <http://openei.org/resources/>
+PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX linkedgeodata: <http://linkedgeodata.org/triplify/>
+PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX lgdp: <http://linkedgeodata.org/property/>
+PREFIX v: <http://www.w3.org/2006/vcard/ns#>
+PREFIX dctype: <http://purl.org/dc/dcmitype/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?a ?v0 ?v1
+WHERE {
+?a rdf:type dbpedia-owl:Country .
+?a rdfs:label ?v0 .
+?a dbpedia-owl:wikiPageRedirects ?v1 .
+}
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:141): Querying the endpoint.
+06.01.2017 00:19:29 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 0 to 1000

@@ -1,0 +1,104 @@
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: bibbase
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, akt=http://www.aktors.org/ontology/portal#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, BibTeX=http://data.bibbase.org/ontology/#}
+Endpoint: http://d2r.bibbase.org/sparql
+Graph: null
+Restrictions: [?a rdf:type BibTeX:Author]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: citeseer
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, akt=http://www.aktors.org/ontology/portal#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, BibTeX=http://data.bibbase.org/ontology/#}
+Endpoint: http://citeseer.rkbexplorer.com/sparql/
+Graph: null
+Restrictions: [?b rdf:type akt:Person]
+Properties: [akt:full-name]
+Functions: {akt:full-name={akt:full-name=lowercase}}
+Page size: 1000
+Type: sparql
+
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: bibbase
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, akt=http://www.aktors.org/ontology/portal#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, BibTeX=http://data.bibbase.org/ontology/#}
+Endpoint: http://d2r.bibbase.org/sparql
+Graph: null
+Restrictions: [?a rdf:type BibTeX:Author]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: citeseer
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, akt=http://www.aktors.org/ontology/portal#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, BibTeX=http://data.bibbase.org/ontology/#}
+Endpoint: http://citeseer.rkbexplorer.com/sparql/
+Graph: null
+Restrictions: [?b rdf:type akt:Person]
+Properties: [akt:full-name]
+Functions: {akt:full-name={akt:full-name=lowercase}}
+Page size: 1000
+Type: sparql
+
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for bibbase
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [rdfs:label]
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX akt: <http://www.aktors.org/ontology/portal#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX BibTeX: <http://data.bibbase.org/ontology/#>
+SELECT DISTINCT ?a ?v0
+WHERE {
+?a rdf:type BibTeX:Author .
+?a rdfs:label ?v0 .
+}
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+12.04.2013 11:07:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+12.04.2013 11:07:24 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+12.04.2013 11:07:26 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 2000 to 3000
+12.04.2013 11:07:27 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 3000 to 4000
+12.04.2013 11:07:29 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 4000 to 5000
+12.04.2013 11:07:31 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 5000 to 6000
+12.04.2013 11:07:32 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 6000 to 7000
+12.04.2013 11:07:34 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 7000 to 8000
+12.04.2013 11:07:35 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 8000 to 9000
+12.04.2013 11:07:37 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 9000 to 10000
+12.04.2013 11:07:39 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 10000 to 11000
+12.04.2013 11:07:39 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 9999 triples and 9952 entities.
+12.04.2013 11:07:39 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 18.871 seconds.
+12.04.2013 11:07:39 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 9952 objects to /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-1812239014.ser
+12.04.2013 11:07:50 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+12.04.2013 11:07:51 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for citeseer
+12.04.2013 11:07:51 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+12.04.2013 11:07:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [akt:full-name]
+12.04.2013 11:07:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX akt: <http://www.aktors.org/ontology/portal#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX BibTeX: <http://data.bibbase.org/ontology/#>
+SELECT DISTINCT ?b ?v0
+WHERE {
+?b rdf:type akt:Person .
+?b akt:full-name ?v0 .
+}
+12.04.2013 11:07:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+12.04.2013 11:07:51 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+12.04.2013 11:08:06 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+12.04.2013 11:08:07 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 1000 triples and 985 entities.
+12.04.2013 11:08:07 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 16.055 seconds.
+12.04.2013 11:08:07 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 985 objects to /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-1955895259.ser
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 577ms.
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name N3
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name N3 not found. Using .nt as default format.
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 37 links above acceptance threshold.
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 530 links to review.
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 48.158 seconds
+12.04.2013 11:08:08 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

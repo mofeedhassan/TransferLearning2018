@@ -1,0 +1,41 @@
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {dbpedia-owl=http://dbpedia.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/, drug=http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/}
+Endpoint: http://dbpedia.org/sparql
+Graph: http://dbpedia.org
+Restrictions: [?a rdf:type dbpedia-owl:Drug]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: drugsbank
+Var: ?b
+Prefixes: {dbpedia-owl=http://dbpedia.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/, drug=http://wifo5-04.informatik.uni-mannheim.de/drugbank/resource/drugbank/}
+Endpoint: http://wifo5-03.informatik.uni-mannheim.de/drugbank/sparql
+Graph: null
+Restrictions: [?b rdf:type drug:drugs]
+Properties: [rdfs:label, drug:genericName]
+Functions: {drug:genericName={drug:genericName=lowercase}, rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /home/mofeed/Programs/EclipseLS/workspace/TransferLearning/AllSpecs/cache/2120562316.ser
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /home/mofeed/Programs/EclipseLS/workspace/TransferLearning/AllSpecs/cache/2120562316.ser
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /home/mofeed/Programs/EclipseLS/workspace/TransferLearning/AllSpecs/cache/2120562316.ser
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 6128
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /home/mofeed/Programs/EclipseLS/workspace/TransferLearning/AllSpecs/cache/1587874524.ser
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /home/mofeed/Programs/EclipseLS/workspace/TransferLearning/AllSpecs/cache/1587874524.ser
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /home/mofeed/Programs/EclipseLS/workspace/TransferLearning/AllSpecs/cache/1587874524.ser
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 4772
+25.11.2016 02:52:29 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:147): Merging with MIN
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 4688ms.
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name NT
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using N3Serializer to serialize
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 426 links above acceptance threshold.
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 5.394 seconds
+25.11.2016 02:52:34 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.

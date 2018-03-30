@@ -1,0 +1,102 @@
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: source_a
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, foaf=http://xmlns.com/foaf/0.1/, am=http://purl.org/collections/nl/am/, owl=http://www.w3.org/2002/07/owl#, stads=http://purl.org/collections/nl/stadsarchief/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, rmon=http://purl.org/collections/nl/rijksmonumenten/}
+Endpoint: http://semanticweb.cs.vu.nl/europeana/sparql/
+Graph: null
+Restrictions: [?a rdf:type stads:Person]
+Properties: [foaf:name]
+Functions: {foaf:name={foaf:name=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: source_b
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, foaf=http://xmlns.com/foaf/0.1/, am=http://purl.org/collections/nl/am/, owl=http://www.w3.org/2002/07/owl#, stads=http://purl.org/collections/nl/stadsarchief/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, rmon=http://purl.org/collections/nl/rijksmonumenten/}
+Endpoint: http://semanticweb.cs.vu.nl/europeana/sparql/
+Graph: null
+Restrictions: [?b rdf:type rmon:Person]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: source_a
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, foaf=http://xmlns.com/foaf/0.1/, am=http://purl.org/collections/nl/am/, owl=http://www.w3.org/2002/07/owl#, stads=http://purl.org/collections/nl/stadsarchief/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, rmon=http://purl.org/collections/nl/rijksmonumenten/}
+Endpoint: http://semanticweb.cs.vu.nl/europeana/sparql/
+Graph: null
+Restrictions: [?a rdf:type stads:Person]
+Properties: [foaf:name]
+Functions: {foaf:name={foaf:name=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: source_b
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, foaf=http://xmlns.com/foaf/0.1/, am=http://purl.org/collections/nl/am/, owl=http://www.w3.org/2002/07/owl#, stads=http://purl.org/collections/nl/stadsarchief/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, rmon=http://purl.org/collections/nl/rijksmonumenten/}
+Endpoint: http://semanticweb.cs.vu.nl/europeana/sparql/
+Graph: null
+Restrictions: [?b rdf:type rmon:Person]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for source_a
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [foaf:name]
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX am: <http://purl.org/collections/nl/am/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX stads: <http://purl.org/collections/nl/stadsarchief/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rmon: <http://purl.org/collections/nl/rijksmonumenten/>
+SELECT DISTINCT ?a ?v0
+WHERE {
+?a rdf:type stads:Person .
+?a foaf:name ?v0 .
+}
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+11.04.2013 13:01:05 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+11.04.2013 13:01:06 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+11.04.2013 13:01:07 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 2000 to 3000
+11.04.2013 13:01:08 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 3000 to 4000
+11.04.2013 13:01:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 4000 to 5000
+11.04.2013 13:01:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 3998 triples and 3975 entities.
+11.04.2013 13:01:09 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 4.014 seconds.
+11.04.2013 13:01:09 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 3975 objects to /media/A0621C46621C2416/Dumps/limes0.6RC2/cache/945424082.ser
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for source_b
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [rdfs:label]
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX am: <http://purl.org/collections/nl/am/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX stads: <http://purl.org/collections/nl/stadsarchief/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rmon: <http://purl.org/collections/nl/rijksmonumenten/>
+SELECT DISTINCT ?b ?v0
+WHERE {
+?b rdf:type rmon:Person .
+?b rdfs:label ?v0 .
+}
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+11.04.2013 13:01:13 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 87 triples and 86 entities.
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 3.35 seconds.
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 86 objects to /media/A0621C46621C2416/Dumps/limes0.6RC2/cache/-1147368957.ser
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 135ms.
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 40 links above acceptance threshold.
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 11.53 seconds
+11.04.2013 13:01:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

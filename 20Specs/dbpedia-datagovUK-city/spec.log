@@ -1,0 +1,40 @@
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {dbpedia-owl=http://dbpedia.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, owl=http://www.w3.org/2002/07/owl#, opencyc=http://sw.opencyc.org/2008/06/10/concept/, yago=http://dbpedia.org/class/yago/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia=http://dbpedia.org/ontology/, administrative-geography=http://statistics.data.gov.uk/def/administrative-geography/}
+Endpoint: http://live.dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type yago:EconomiesByCityInEngland]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: datagovuk
+Var: ?b
+Prefixes: {dbpedia-owl=http://dbpedia.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, owl=http://www.w3.org/2002/07/owl#, opencyc=http://sw.opencyc.org/2008/06/10/concept/, yago=http://dbpedia.org/class/yago/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia=http://dbpedia.org/ontology/, administrative-geography=http://statistics.data.gov.uk/def/administrative-geography/}
+Endpoint: http://services.data.gov.uk/statistics/sparql
+Graph: null
+Restrictions: [?b rdf:type administrative-geography:LocalAuthorityDistrict]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-457661236.ser
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-457661236.ser
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-457661236.ser
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 4
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-683823472.ser
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-683823472.ser
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /media/mofeed/A0621C46621C24164/TransferLearningCollections/00-AllSpecsCashing/cache/-683823472.ser
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 444
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 53ms.
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name NT
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using N3Serializer to serialize
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 3 links above acceptance threshold.
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 0.497 seconds
+02.01.2017 17:29:35 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.

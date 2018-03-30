@@ -1,0 +1,61 @@
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: data-incubator-climb
+Var: ?a
+Prefixes: {climb=http://climb.dataincubator.org/vocabs/climb/, ov=http://open.vocab.org/terms/, dgadmingeo=http://statistics.data.gov.uk/def/administrative-geography/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, yago=http://dbpedia.org/class/yago/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpp=http://dbpedia.org/property/, traffic=http://transport.data.gov.uk/def/traffic/, gazetteer=http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/, naptan=http://transport.data.gov.uk/def/naptan/, rail=http://ontologi.es/rail/vocab#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, admingeo=http://data.ordnancesurvey.co.uk/ontology/admingeo/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type climb:Venue ]
+Properties: [geo:lat, geo:long]
+Functions: {geo:long={geo:long=number}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: linked-railway-data-project
+Var: ?b
+Prefixes: {climb=http://climb.dataincubator.org/vocabs/climb/, ov=http://open.vocab.org/terms/, dgadmingeo=http://statistics.data.gov.uk/def/administrative-geography/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, yago=http://dbpedia.org/class/yago/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpp=http://dbpedia.org/property/, traffic=http://transport.data.gov.uk/def/traffic/, gazetteer=http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/, naptan=http://transport.data.gov.uk/def/naptan/, rail=http://ontologi.es/rail/vocab#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, admingeo=http://data.ordnancesurvey.co.uk/ontology/admingeo/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://sparql.sindice.com/sparql
+Graph: null
+Restrictions: [?b rdf:type rail:Station ]
+Properties: [geo:lat, geo:long]
+Functions: {geo:long={geo:long=number}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: data-incubator-climb
+Var: ?a
+Prefixes: {climb=http://climb.dataincubator.org/vocabs/climb/, ov=http://open.vocab.org/terms/, dgadmingeo=http://statistics.data.gov.uk/def/administrative-geography/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, yago=http://dbpedia.org/class/yago/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpp=http://dbpedia.org/property/, traffic=http://transport.data.gov.uk/def/traffic/, gazetteer=http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/, naptan=http://transport.data.gov.uk/def/naptan/, rail=http://ontologi.es/rail/vocab#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, admingeo=http://data.ordnancesurvey.co.uk/ontology/admingeo/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type climb:Venue ]
+Properties: [geo:lat, geo:long]
+Functions: {geo:long={geo:long=number}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: linked-railway-data-project
+Var: ?b
+Prefixes: {climb=http://climb.dataincubator.org/vocabs/climb/, ov=http://open.vocab.org/terms/, dgadmingeo=http://statistics.data.gov.uk/def/administrative-geography/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, yago=http://dbpedia.org/class/yago/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpp=http://dbpedia.org/property/, traffic=http://transport.data.gov.uk/def/traffic/, gazetteer=http://data.ordnancesurvey.co.uk/ontology/50kGazetteer/, naptan=http://transport.data.gov.uk/def/naptan/, rail=http://ontologi.es/rail/vocab#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, admingeo=http://data.ordnancesurvey.co.uk/ontology/admingeo/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://sparql.sindice.com/sparql
+Graph: null
+Restrictions: [?b rdf:type rail:Station ]
+Properties: [geo:lat, geo:long]
+Functions: {geo:long={geo:long=number}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/-1005722383.ser
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/-1005722383.ser
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 1307
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/1756995465.ser
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/Dumps/Level2/LinkingProcess/limes0.6RC2/cache/1756995465.ser
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 1448
+10.04.2013 14:55:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 440ms.
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 50150 links above acceptance threshold.
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 1.21 seconds
+10.04.2013 14:55:04 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

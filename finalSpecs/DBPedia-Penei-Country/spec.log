@@ -1,0 +1,62 @@
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: dbpedia
+Var: ?a
+Prefixes: {lgdp=http://linkedgeodata.org/property/, dc=http://purl.org/dc/terms/, lgdo=http://linkedgeodata.org/ontology/, dbpedia-owl=http://dbpedia.org/ontology/, mo=http://purl.org/ontology/mo/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, yago=http://dbpedia.org/class/yago/, hcterms=http://purl.org/uF/hCard/terms/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, umbel-sc=http://umbel.org/umbel/sc/, openei=http://openei.org/resources/, dbpedia=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, linkedgeodata=http://linkedgeodata.org/triplify/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Country ]
+Properties: [rdfs:label, dbpedia:wikiPageRedirects]
+Functions: {rdfs:label={rdfs:label=lowercase}, dbpedia:wikiPageRedirects={dbpedia:wikiPageRedirects=cleaniri->lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: openei
+Var: ?b
+Prefixes: {lgdp=http://linkedgeodata.org/property/, dc=http://purl.org/dc/terms/, lgdo=http://linkedgeodata.org/ontology/, dbpedia-owl=http://dbpedia.org/ontology/, mo=http://purl.org/ontology/mo/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, yago=http://dbpedia.org/class/yago/, hcterms=http://purl.org/uF/hCard/terms/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, umbel-sc=http://umbel.org/umbel/sc/, openei=http://openei.org/resources/, dbpedia=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, linkedgeodata=http://linkedgeodata.org/triplify/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://en.openei.org/sparql
+Graph: null
+Restrictions: [?b rdf:type openei:Category-3ACountries ]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: dbpedia
+Var: ?a
+Prefixes: {lgdp=http://linkedgeodata.org/property/, dc=http://purl.org/dc/terms/, lgdo=http://linkedgeodata.org/ontology/, dbpedia-owl=http://dbpedia.org/ontology/, mo=http://purl.org/ontology/mo/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, yago=http://dbpedia.org/class/yago/, hcterms=http://purl.org/uF/hCard/terms/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, umbel-sc=http://umbel.org/umbel/sc/, openei=http://openei.org/resources/, dbpedia=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, linkedgeodata=http://linkedgeodata.org/triplify/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Country ]
+Properties: [rdfs:label, dbpedia:wikiPageRedirects]
+Functions: {rdfs:label={rdfs:label=lowercase}, dbpedia:wikiPageRedirects={dbpedia:wikiPageRedirects=cleaniri->lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: openei
+Var: ?b
+Prefixes: {lgdp=http://linkedgeodata.org/property/, dc=http://purl.org/dc/terms/, lgdo=http://linkedgeodata.org/ontology/, dbpedia-owl=http://dbpedia.org/ontology/, mo=http://purl.org/ontology/mo/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, yago=http://dbpedia.org/class/yago/, hcterms=http://purl.org/uF/hCard/terms/, geonames=http://www.geonames.org/ontology#, rdfs=http://www.w3.org/2000/01/rdf-schema#, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, umbel-sc=http://umbel.org/umbel/sc/, openei=http://openei.org/resources/, dbpedia=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, linkedgeodata=http://linkedgeodata.org/triplify/, skos=http://www.w3.org/2004/02/skos/core#}
+Endpoint: http://en.openei.org/sparql
+Graph: null
+Restrictions: [?b rdf:type openei:Category-3ACountries ]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-1953458838.ser
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-1953458838.ser
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 27
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-12134658.ser
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-12134658.ser
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 242
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:132): Merging with MAX
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 34ms.
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 11 links above acceptance threshold.
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 0.258 seconds
+11.04.2013 17:42:33 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

@@ -1,0 +1,93 @@
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: thefactbook
+Var: ?a
+Prefixes: {lgdp=http://linkedgeodata.org/property/, lgdo=http://linkedgeodata.org/ontology/, factbook=http://www4.wiwiss.fu-berlin.de/factbook/ns#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type factbook:Country]
+Properties: [factbook:internetcountrycode]
+Functions: {factbook:internetcountrycode={factbook:internetcountrycode=replace(.,)->lowercase}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: linkedgeodata
+Var: ?b
+Prefixes: {lgdp=http://linkedgeodata.org/property/, lgdo=http://linkedgeodata.org/ontology/, factbook=http://www4.wiwiss.fu-berlin.de/factbook/ns#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://linkedgeodata.org/sparql/
+Graph: null
+Restrictions: [?b rdf:type lgdo:Country]
+Properties: [lgdp:country_code_iso3166_1_alpha_2]
+Functions: {lgdp:country_code_iso3166_1_alpha_2={lgdp:country_code_iso3166_1_alpha_2=lowercase}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: thefactbook
+Var: ?a
+Prefixes: {lgdp=http://linkedgeodata.org/property/, lgdo=http://linkedgeodata.org/ontology/, factbook=http://www4.wiwiss.fu-berlin.de/factbook/ns#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type factbook:Country]
+Properties: [factbook:internetcountrycode]
+Functions: {factbook:internetcountrycode={factbook:internetcountrycode=replace(.,)->lowercase}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: linkedgeodata
+Var: ?b
+Prefixes: {lgdp=http://linkedgeodata.org/property/, lgdo=http://linkedgeodata.org/ontology/, factbook=http://www4.wiwiss.fu-berlin.de/factbook/ns#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://linkedgeodata.org/sparql/
+Graph: null
+Restrictions: [?b rdf:type lgdo:Country]
+Properties: [lgdp:country_code_iso3166_1_alpha_2]
+Functions: {lgdp:country_code_iso3166_1_alpha_2={lgdp:country_code_iso3166_1_alpha_2=lowercase}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for thefactbook
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [factbook:internetcountrycode]
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX lgdp: <http://linkedgeodata.org/property/>
+PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?a ?v0
+WHERE {
+?a rdf:type factbook:Country .
+?a factbook:internetcountrycode ?v0 .
+}
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+22.04.2013 19:06:16 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 237 triples and 237 entities.
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 0.569 seconds.
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 237 objects to /home/mofeed/Desktop/limes0.6RC2/cache/-81985903.ser
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for linkedgeodata
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [lgdp:country_code_iso3166_1_alpha_2]
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX lgdp: <http://linkedgeodata.org/property/>
+PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX factbook: <http://www4.wiwiss.fu-berlin.de/factbook/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?b ?v0
+WHERE {
+?b rdf:type lgdo:Country .
+?b lgdp:country_code_iso3166_1_alpha_2 ?v0 .
+}
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+22.04.2013 19:06:17 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 214 triples and 214 entities.
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 1.191 seconds.
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 214 objects to /home/mofeed/Desktop/limes0.6RC2/cache/-1355919112.ser
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 62ms.
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 201 links above acceptance threshold.
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 2.123 seconds
+22.04.2013 19:06:18 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

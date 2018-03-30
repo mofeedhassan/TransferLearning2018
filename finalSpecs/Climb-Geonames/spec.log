@@ -1,0 +1,106 @@
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: data-incubator-climb
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type climb:Venue ]
+Properties: [rdfs:label, geo:lat, geo:long]
+Functions: {rdfs:label={rdfs:label=lowercase}, geo:long={geo:long=number}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: geonames-semantic-web
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?b rdf:type geonames:Feature, ?b geonames:inCountry <http://www.geonames.org/countries/#GB>, ?b geonames:featureClass geonames:T]
+Properties: [geonames:name, geo:lat, geo:long]
+Functions: {geo:long={geo:long=number}, geonames:name={geonames:name=}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: data-incubator-climb
+Var: ?a
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?a rdf:type climb:Venue ]
+Properties: [rdfs:label, geo:lat, geo:long]
+Functions: {rdfs:label={rdfs:label=lowercase}, geo:long={geo:long=number}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: geonames-semantic-web
+Var: ?b
+Prefixes: {rdfs=http://www.w3.org/2000/01/rdf-schema#, climb=http://climb.dataincubator.org/vocabs/climb/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, geonames=http://www.geonames.org/ontology#, dcterms=http://purl.org/dc/terms/}
+Endpoint: http://lod.openlinksw.com/sparql
+Graph: null
+Restrictions: [?b rdf:type geonames:Feature, ?b geonames:inCountry <http://www.geonames.org/countries/#GB>, ?b geonames:featureClass geonames:T]
+Properties: [geonames:name, geo:lat, geo:long]
+Functions: {geo:long={geo:long=number}, geonames:name={geonames:name=}, geo:lat={geo:lat=number}}
+Page size: 1000
+Type: sparql
+
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for data-incubator-climb
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [rdfs:label, geo:lat, geo:long]
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX climb: <http://climb.dataincubator.org/vocabs/climb/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?a ?v0 ?v1 ?v2
+WHERE {
+?a rdf:type climb:Venue .
+?a rdfs:label ?v0 .
+?a geo:lat ?v1 .
+?a geo:long ?v2 .
+}
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+22.04.2013 16:50:19 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 2000 to 3000
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 1310 triples and 1307 entities.
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 1.277 seconds.
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 1307 objects to /home/mofeed/Desktop/limes0.6RC2/cache/-1288756346.ser
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:243): No cached data found for geonames-semantic-web
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <sparql> reader
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [geonames:name, geo:lat, geo:long]
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:135): Query issued is 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX climb: <http://climb.dataincubator.org/vocabs/climb/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX geonames: <http://www.geonames.org/ontology#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?b ?v0 ?v1 ?v2
+WHERE {
+?b rdf:type geonames:Feature .
+?b geonames:inCountry <http://www.geonames.org/countries/#GB> .
+?b geonames:featureClass geonames:T .
+?b geonames:name ?v0 .
+?b geo:lat ?v1 .
+?b geo:long ?v2 .
+}
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:137): Querying the endpoint.
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 0 to 1000
+22.04.2013 16:50:20 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:145): Getting statements 1000 to 2000
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:241): Retrieved 558 triples and 174 entities.
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:242): Retrieving statements took 0.302 seconds.
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:176): Serializing 174 objects to /home/mofeed/Desktop/limes0.6RC2/cache/1659220530.ser
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 254ms.
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 0 links above acceptance threshold.
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 2.273 seconds
+22.04.2013 16:50:21 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

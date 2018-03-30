@@ -1,0 +1,62 @@
+11.04.2013 14:52:03 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:163): Source = ID: dbpedia
+Var: ?a
+Prefixes: {dc=http://purl.org/dc/terms/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Film]
+Properties: [rdfs:label, dbpedia-owl:director/rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}, dbpedia-owl:director/rdfs:label={dbpedia-owl:director/rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 14:52:03 INFO  [main] de.uni_leipzig.simba.io.ConfigReader.validateAndRead(ConfigReader.java:168): Target = ID: linkedmdb
+Var: ?b
+Prefixes: {dc=http://purl.org/dc/terms/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://data.linkedmdb.org/sparql
+Graph: null
+Restrictions: [?b rdf:type linkedmdb:film]
+Properties: [rdfs:label, linkedmdb:director/rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}, linkedmdb:director/rdfs:label={linkedmdb:director/rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 14:52:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:126): ID: dbpedia
+Var: ?a
+Prefixes: {dc=http://purl.org/dc/terms/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Film]
+Properties: [rdfs:label, dbpedia-owl:director/rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}, dbpedia-owl:director/rdfs:label={dbpedia-owl:director/rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 14:52:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:127): ID: linkedmdb
+Var: ?b
+Prefixes: {dc=http://purl.org/dc/terms/, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-owl=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/, linkedmdb=http://data.linkedmdb.org/resource/movie/, dbpedia-prop=http://dbpedia.org/property/, owl=http://www.w3.org/2002/07/owl#, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#}
+Endpoint: http://data.linkedmdb.org/sparql
+Graph: null
+Restrictions: [?b rdf:type linkedmdb:film]
+Properties: [rdfs:label, linkedmdb:director/rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}, linkedmdb:director/rdfs:label={linkedmdb:director/rdfs:label=lowercase}}
+Page size: 1000
+Type: sparql
+
+11.04.2013 14:52:03 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:132): Loading source data ...
+11.04.2013 14:52:03 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-125209504.ser
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/-125209504.ser
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 39256
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:137): Loading target data ...
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:230): Found cached data. Loading data from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/303927875.ser
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:236): Cached data loaded successfully from file /media/A0621C46621C2416/CheckTransferLearningEndpointsUsingLimes/limes0.6RC2/cache/303927875.ser
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:237): Size = 2475
+11.04.2013 14:52:06 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:150): Getting links ...
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:141): Merging with MIN
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:153): Got links in 169884ms.
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:21): Getting serializer with name NT
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:27): Serializer with name NT not found. Using .nt as default format.
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Using N3Serializer to serialize
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:178): Returned 0 links above acceptance threshold.
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:179): Returned 0 links to review.
+11.04.2013 14:54:55 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:186): Mapping carried out in 172.191 seconds
+11.04.2013 14:54:56 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:187): Done.

@@ -1,0 +1,41 @@
+16.01.2017 20:37:57 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {dbpedia-owl=http://dbpedia.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, linkedmdb=http://data.linkedmdb.org/resource/movie/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/}
+Endpoint: http://dbpedia.org/sparql
+Graph: 
+Restrictions: [?a rdf:type dbpedia-owl:Film]
+Properties: [rdfs:label, dbpedia-owl:director/rdfs:label, dbpedia-owl:releaseDate]
+Functions: {rdfs:label={rdfs:label=}, dbpedia-owl:releaseDate={dbpedia-owl:releaseDate=}, dbpedia-owl:director/rdfs:label={dbpedia-owl:director/rdfs:label=}}
+Page size: 1000
+Type: sparql
+
+16.01.2017 20:37:57 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: linkedmdb
+Var: ?b
+Prefixes: {dbpedia-owl=http://dbpedia.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, linkedmdb=http://data.linkedmdb.org/resource/movie/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/}
+Endpoint: http://data.linkedmdb.org/sparql
+Graph: 0
+Restrictions: [?b rdf:type linkedmdb:film]
+Properties: [rdfs:label, linkedmdb:director/rdfs:label, linkedmdb:initial_release_date]
+Functions: {rdfs:label={rdfs:label=}, linkedmdb:initial_release_date={linkedmdb:initial_release_date=}, linkedmdb:director/rdfs:label={linkedmdb:director/rdfs:label=}}
+Page size: 1000
+Type: sparql
+
+16.01.2017 20:37:57 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+16.01.2017 20:37:57 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /home/MofeedHassan/TransferLearning/LIMES/cache/1608867271.ser
+16.01.2017 20:37:57 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /home/MofeedHassan/TransferLearning/LIMES/cache/1608867271.ser
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /home/MofeedHassan/TransferLearning/LIMES/cache/1608867271.ser
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 15259
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /home/MofeedHassan/TransferLearning/LIMES/cache/2038303684.ser
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /home/MofeedHassan/TransferLearning/LIMES/cache/2038303684.ser
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /home/MofeedHassan/TransferLearning/LIMES/cache/2038303684.ser
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 2095
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:162): Merging with ADD and filtering with condition ADD(0.5*Levenshtein(a.rdfs:label,b.rdfs:label),0.5*Equality(a.dbpedia-owl:releaseDate, b.linkedmdb:initial_release_date)) and threshold 0.8
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 444ms.
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name TAB
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using TabSeparatedSerializer to serialize
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 118 links above acceptance threshold.
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 1.358 seconds
+16.01.2017 20:37:58 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.

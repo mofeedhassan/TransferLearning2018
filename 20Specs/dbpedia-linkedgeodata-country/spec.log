@@ -1,0 +1,42 @@
+16.01.2017 16:44:51 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, dbpedia-owl=http://dbpedia.org/ontology/, linkedgeodata=http://linkedgeodata.org/triplify/, lgdo=http://linkedgeodata.org/ontology/, lgdp=http://linkedgeodata.org/property/, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/}
+Endpoint: http://live.dbpedia.org/sparql/
+Graph: 
+Restrictions: [?a a dbpedia-owl:Country. ?a wgs84:lat ?lat. ?a wgs84:long ?long]
+Properties: [rdfs:label, wgs84:lat, wgs84:long]
+Functions: {rdfs:label={rdfs:label=}, wgs84:long={wgs84:long=}, wgs84:lat={wgs84:lat=}}
+Page size: 1000
+Type: sparql
+
+16.01.2017 16:44:51 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: linkedgeodata
+Var: ?b
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, dbpedia-owl=http://dbpedia.org/ontology/, linkedgeodata=http://linkedgeodata.org/triplify/, lgdo=http://linkedgeodata.org/ontology/, lgdp=http://linkedgeodata.org/property/, owl=http://www.w3.org/2002/07/owl#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia=http://dbpedia.org/ontology/, foaf=http://xmlns.com/foaf/0.1/}
+Endpoint: http://linkedgeodata.org/sparql/
+Graph: 
+Restrictions: [?b a lgdo:Country. ?b wgs84:lat ?lat. ?b wgs84:long ?long]
+Properties: [rdfs:label, wgs84:lat, wgs84:long]
+Functions: {rdfs:label={rdfs:label=}, wgs84:long={wgs84:long=}, wgs84:lat={wgs84:lat=}}
+Page size: 1000
+Type: sparql
+
+16.01.2017 16:44:51 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+16.01.2017 16:44:51 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /home/MofeedHassan/TransferLearning/LIMES/cache/-2076471682.ser
+16.01.2017 16:44:51 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /home/MofeedHassan/TransferLearning/LIMES/cache/-2076471682.ser
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /home/MofeedHassan/TransferLearning/LIMES/cache/-2076471682.ser
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 693
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /home/MofeedHassan/TransferLearning/LIMES/cache/-2117167153.ser
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /home/MofeedHassan/TransferLearning/LIMES/cache/-2117167153.ser
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /home/MofeedHassan/TransferLearning/LIMES/cache/-2117167153.ser
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 224
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+16.01.2017 16:44:52 INFO  [main] de.uni_leipzig.simba.mapper.atomic.JaroMapper.getMapping(JaroMapper.java:25): Running JaroMapper
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.mapper.SimpleSetConstraintsMapper.mergeMaps(SimpleSetConstraintsMapper.java:162): Merging with ADD and filtering with condition ADD(0.5*Jaro(a.rdfs:label, b.rdfs:label), 0.5*euclidean(a.wgs84:lat|wgs84:long,b.wgs84:lat|wgs84:long)) and threshold 0.95
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 2001ms.
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name NT
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using N3Serializer to serialize
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 56 links above acceptance threshold.
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 2.933 seconds
+16.01.2017 16:44:54 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.

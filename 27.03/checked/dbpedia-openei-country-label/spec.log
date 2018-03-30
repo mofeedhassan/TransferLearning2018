@@ -1,0 +1,72 @@
+07.03.2018 22:19:38 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:135): ID: dbpedia
+Var: ?a
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, mo=http://purl.org/ontology/mo/, dbpedia-owl=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, hcterms=http://purl.org/uF/hCard/terms/, yago=http://dbpedia.org/class/yago/, skos=http://www.w3.org/2004/02/skos/core#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, openei=http://openei.org/resources/, linkedmdb=http://data.linkedmdb.org/resource/movie/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, lgdo=http://linkedgeodata.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/}
+Endpoint: http://dbpedia.org/sparql
+Graph: null
+Restrictions: [?a rdf:type dbpedia-owl:Country ]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase }}
+Page size: 1000
+Type: sparql
+
+07.03.2018 22:19:38 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:136): ID: openei
+Var: ?b
+Prefixes: {umbel-sc=http://umbel.org/umbel/sc/, wgs84=http://www.w3.org/2003/01/geo/wgs84_pos#, mo=http://purl.org/ontology/mo/, dbpedia-owl=http://dbpedia.org/ontology/, owl=http://www.w3.org/2002/07/owl#, hcterms=http://purl.org/uF/hCard/terms/, yago=http://dbpedia.org/class/yago/, skos=http://www.w3.org/2004/02/skos/core#, rdfs=http://www.w3.org/2000/01/rdf-schema#, dbpedia-prop=http://dbpedia.org/property/, openei=http://openei.org/resources/, linkedmdb=http://data.linkedmdb.org/resource/movie/, geo=http://www.w3.org/2003/01/geo/wgs84_pos#, lgdo=http://linkedgeodata.org/ontology/, rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#, v=http://www.w3.org/2006/vcard/ns#, dctype=http://purl.org/dc/dcmitype/, foaf=http://xmlns.com/foaf/0.1/, dc=http://purl.org/dc/terms/}
+Endpoint: /media/mofeed/TOSHIBA2T/Samsumg1T/03_Work/AllDumps/openei/openeiDump.n3
+Graph: null
+Restrictions: [?b rdf:type openei:Category-3ACountries ]
+Properties: [rdfs:label]
+Functions: {rdfs:label={rdfs:label=lowercase}}
+Page size: -1
+Type: nt
+
+07.03.2018 22:19:38 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:141): Loading source data ...
+07.03.2018 22:19:38 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/-605535489.ser
+07.03.2018 22:19:38 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:235): Found cached data. Loading data from file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/-605535489.ser
+07.03.2018 22:19:39 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:241): Cached data loaded successfully from file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/-605535489.ser
+07.03.2018 22:19:39 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:242): Size = 7003
+07.03.2018 22:19:39 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:146): Loading target data ...
+07.03.2018 22:19:39 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:232): Checking for file /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/1778558619.ser
+07.03.2018 22:19:39 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.getData(HybridCache.java:248): No cached data found for openei
+07.03.2018 22:19:39 INFO  [main] de.uni_leipzig.simba.query.QueryModuleFactory.getQueryModule(QueryModuleFactory.java:19): Generating <nt> reader
+07.03.2018 22:25:41 INFO  [main] de.uni_leipzig.simba.query.FileQueryModule.<init>(FileQueryModule.java:56): RDF model read from /media/mofeed/TOSHIBA2T/Samsumg1T/03_Work/AllDumps/openei/openeiDump.n3 is of size 3980470
+07.03.2018 22:25:41 INFO  [main] de.uni_leipzig.simba.query.ModelRegistry.register(ModelRegistry.java:34): Registry = [/media/mofeed/TOSHIBA2T/Samsumg1T/03_Work/AllDumps/openei/openeiDump.n3]
+07.03.2018 22:25:41 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:93): Properties are [rdfs:label]
+07.03.2018 22:25:41 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:139): Query issued is 
+PREFIX umbel-sc: <http://umbel.org/umbel/sc/>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX mo: <http://purl.org/ontology/mo/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX hcterms: <http://purl.org/uF/hCard/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-prop: <http://dbpedia.org/property/>
+PREFIX openei: <http://openei.org/resources/>
+PREFIX linkedmdb: <http://data.linkedmdb.org/resource/movie/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX v: <http://www.w3.org/2006/vcard/ns#>
+PREFIX dctype: <http://purl.org/dc/dcmitype/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/terms/>
+SELECT DISTINCT ?b ?v0
+WHERE {
+?b rdf:type openei:Category-3ACountries .
+?b rdfs:label ?v0 .
+}
+07.03.2018 22:25:41 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:141): Querying the endpoint.
+07.03.2018 22:25:41 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:149): Getting statements 0 to -1
+07.03.2018 22:25:46 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:248): Retrieved 178 triples and 178 entities.
+07.03.2018 22:25:46 INFO  [main] de.uni_leipzig.simba.query.SparqlQueryModule.fillCache(SparqlQueryModule.java:249): Retrieving statements took 4.49 seconds.
+07.03.2018 22:25:46 INFO  [main] de.uni_leipzig.simba.cache.HybridCache.saveToFile(HybridCache.java:179): Serializing 178 objects to /media/mofeed/TOSHIBA2T/LIMES.0.6.RC4/cache/1778558619.ser
+07.03.2018 22:25:46 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:159): Getting links ...
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:162): Got links in 14351ms.
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.io.SerializerFactory.getSerializer(SerializerFactory.java:22): Getting serializer with name NT
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:172): Using N3Serializer to serialize
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:191): Returned 0 links above acceptance threshold.
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:192): Returned 0 links to review.
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:199): Mapping carried out in 383.108 seconds
+07.03.2018 22:26:01 INFO  [main] de.uni_leipzig.simba.controller.PPJoinController.run(PPJoinController.java:200): Done.
